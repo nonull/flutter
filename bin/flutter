@@ -189,4 +189,5 @@ fi
 
 # FLUTTER_TOOL_ARGS isn't quoted below, because it is meant to be considered as
 # separate space-separated args.
-"$DART" --packages="$FLUTTER_TOOLS_DIR/.packages" $FLUTTER_TOOL_ARGS "$SNAPSHOT_PATH" "$@"
+echo $DART
+"$DART" --packages="$FLUTTER_TOOLS_DIR/.packages" $FLUTTER_TOOL_ARGS --enable-vm-service "$SNAPSHOT_PATH" "$@"
